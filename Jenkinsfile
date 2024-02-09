@@ -1,13 +1,15 @@
-pipeline {
-    agent any 
-    tools {
-         maven 'maven'
-         jdk 'java'
+pipeline{
+    agent any
+    environment {
+        PATH = "$PATH:/opt/apache-maven-3.6.3/bin"
     }
     stages {
-         stage('Stage-0 : Static Code Analysis Using SonarQube') { 
-           steps {
+         stage('SonarQube analysis') {
+            steps{
+            withSonarQubeEnv('Sonar-Server-7.8') {          
                 sh 'mvn sonar:sonar'
+            }
+                
             }
         }
         stage('Stage-1 : Clean') { 
@@ -52,12 +54,12 @@ pipeline {
         }
         stage('Stage-9 : Deployment - Deploy a Artifact cloudbinay-3.6.3-SNAPSHOT.war file to Tomcat Server') { 
             steps {
-                sh 'curl -u admin:redhat@123 -T target/**.war "http://34.207.114.102:8080/manager/text/deploy?path=/cloudbinary&update=true"'
+                sh 'curl -u admin:Varma_3003 -T target/**.war "http://13.127.99.76:8080/manager/text/deploy?path=/cloudbinary&update=true"'
             }
         }
         stage('Stage-10 : SmokeTest') { 
             steps {
-                sh 'curl --retry-delay 10 --retry 5 "http://34.207.114.102:8080/cloudbinary"'
+                sh 'curl --retry-delay 10 --retry 5 "http://13.127.99.76:8080/cloudbinary"'
             }
         } 
     }
