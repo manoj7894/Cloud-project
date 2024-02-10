@@ -3,7 +3,7 @@
     <modelVersion>4.0.0</modelVersion>
     <groupId>com.aws.codestar.projecttemplates</groupId>
     <artifactId>cloudbinary</artifactId>
-    <version>3.3.6</version>
+    <version>3.6.3</version>
     <!-- <version>9.10.3-SNAPSHOT</version> -->
     <packaging>war</packaging>
     <name>Cloud Binary - Sample Spring MVC Application</name>
@@ -14,14 +14,11 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
         
-        <sonar.host.url>http://13.127.255.208:9000/</sonar.host.url>  
-        <sonar.login>admin</sonar.login>                            
-        <sonar.password>Varma_3003</sonar.password>   
-        
-       <sonar.host.url>http://13.127.255.208:9000/</sonar.host.url>           
-       <sonar.login>849bbc86872babe8075b0ba714c09f4001454758</sonar.login>  
+        <sonar.host.url>http://13.127.255.208:9000</sonar.host.url>
+        <sonar.organization>javacicdcodescan</sonar.organization>
+        <sonar.projectKey>javacicdcodescan</sonar.projectKey>
+        <sonar.login>6073f8282a3e1c304a1fb5570497d6f944887b34</sonar.login>
     </properties>
-
 
 <distributionManagement>
     <repository>
