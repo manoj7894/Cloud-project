@@ -14,12 +14,8 @@
         <maven.compiler.source>11</maven.compiler.source>
         <maven.compiler.target>11</maven.compiler.target>
 
-        <sonar.host.url>http://13.127.255.208:9000/</sonar.host.url> 
-        <sonar.login>admin</sonar.login>                            
-        <sonar.password>Varma_3003</sonar.password>                     
-
-       <sonar.host.url>http://13.127.255.208:9000/</sonar.host.url>          
-       <sonar.login>dfdfd864e5a01fa3a85b3ddd4642c57ce8a8fbfb</sonar.login> 
+        <sonar.login>dfdfd864e5a01fa3a85b3ddd4642c57ce8a8fbfb</sonar.login>
+        <sonar.password>Varma_3003</sonar.password>          
     </properties>
 
 <distributionManagement>
