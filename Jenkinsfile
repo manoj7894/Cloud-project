@@ -4,12 +4,9 @@ pipeline{
         PATH = "$PATH:/opt/apache-maven-3.6.3/bin"
     }
     stages {
-         stage('SonarQube analysis') {
-            steps{
-            withSonarQubeEnv('Sonar-Server-7.8') {          
+         stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+           steps {
                 sh 'mvn sonar:sonar'
-            }
-                
             }
         }
         stage('Stage-1 : Clean') { 
