@@ -1,9 +1,9 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
     xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
     <modelVersion>4.0.0</modelVersion>
-    <groupId>org.sonarsource.scanner.maven</groupId>
-    <artifactId>sonar-maven-plugin</artifactId>
-    <version>3.10.0.2594</version>
+    <groupId>com.aws.codestar.projecttemplates</groupId>
+    <artifactId>cloudbinary</artifactId>
+    <version>3.6.3</version>
     <!-- <version>9.10.3-SNAPSHOT</version> -->
     <packaging>war</packaging>
     <name>Cloud Binary - Sample Spring MVC Application</name>
@@ -12,13 +12,7 @@
         <junit.platform.version>1.2.0</junit.platform.version>
         <junit.jupiter.version>5.2.0</junit.jupiter.version>
         <maven.compiler.source>11</maven.compiler.source>
-        <maven.compiler.target>11</maven.compiler.target>
-        <sonar.java.binaries>target/classes</sonar.java.binaries>
-        
-        <sonar.host.url>http://13.127.255.208:9000</sonar.host.url>
-        <sonar.organization>javacicdcodescan</sonar.organization>
-        <sonar.projectKey>javacicdcodescan</sonar.projectKey>
-        <sonar.login>6073f8282a3e1c304a1fb5570497d6f944887b34</sonar.login>
+        <maven.compiler.target>11</maven.compiler.target>     
     </properties>
 
 <distributionManagement>
