@@ -44,9 +44,9 @@ pipeline{
                 sh 'mvn deploy'
             }
         }
-        stage('Stage-9 : Deployment - Deploy a Artifact cloudbinay-3.6.3-SNAPSHOT.war file to Tomcat Server') { 
-            steps {
-                sh 'curl -u admin:Varma_3003 -T target/**.war "http://13.127.99.76:8080/manager/text/deploy?path=/cloudbinary&update=true"'
+        stage('Deploy to tomcat server') {
+            steps{                                 
+                deploy adapters: [tomcat9(credentialsId: 'a015194b-0279-4b25-a394-3c2d44c2d080', path: '', url: 'http://13.127.99.76:8080/')], contextPath: 'Cloud-Binary', war: '**/*.war'
             }
         }
         stage('Stage-10 : SmokeTest') { 
