@@ -53,6 +53,11 @@ pipeline{
             steps {
                 sh 'curl --retry-delay 10 --retry 5 "http://13.127.99.76:8080/cloudbinary"'
             }
-        } 
+        }
+        stage('Stage-0 : Static Code Analysis Using SonarQube') { 
+           steps {
+                sh 'mvn sonar:sonar'
+            }
+        }
     }
 }
